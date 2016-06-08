@@ -19,6 +19,7 @@ export class FeedServiceService {
       author: obj.author,
       title: obj.title,
       url: obj.url,
+      thumbnail: obj.thumbnail,
       starred: false
     };
   });

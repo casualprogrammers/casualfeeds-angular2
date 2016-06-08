@@ -3,4 +3,5 @@ export class Feed {
     author: string;
     url: string;
     starred: boolean;
+    thumbnail: string; 
 }

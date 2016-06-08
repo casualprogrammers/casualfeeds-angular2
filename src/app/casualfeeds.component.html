@@ -12,7 +12,11 @@
 <div>
   <div *ngFor="let feed of Feeds; let i = index" style="padding: 0 10px 10px 10px">
     <i (click)="starFeed(feed)">Star</i>
-    <div>{{feed.title}}</div>
+    <div>
+      <a href="{{feed.url}}">
+        {{feed.title}}
+      </a>
+    </div>
     <div>{{feed.author}}</div>
   </div>
 </div>
