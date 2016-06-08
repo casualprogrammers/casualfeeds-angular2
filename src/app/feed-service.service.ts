@@ -10,14 +10,16 @@ export class FeedServiceService {
 
 
   constructor(private http: Http) {}
-
-
+  
+  //utility functions declared to improve readability
+  private jsonize = res => res.json().data;
+  private formatDataToReturn = data => data.children.map ( c => c.data  ) ;
 
   getFeeds() {
     return this.http.get(this.redditUrl)
       .toPromise()
-      .then(res => res.json().data)
-      .then(data => data.children.map ( c => c.data  ) )
+      .then(this.jsonize)
+      .then(this.formatDataToReturn)
       .catch(this.handleError);
   }
 
