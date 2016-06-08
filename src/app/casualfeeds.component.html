@@ -14,7 +14,8 @@
     <i (click)="starFeed(feed)">Star</i>
     <div>
       <a href="{{feed.url}}">
-        {{feed.title}}
+        <img src="{{feed.thumbnail}}" *ngIf="feed.thumbnail != 'self'"/>
+        <span>{{feed.title}}</span>
       </a>
     </div>
     <div>{{feed.author}}</div>
