@@ -1,3 +1,10 @@
-<p>
-  feed-row works!
-</p>
+<div [ngClass]="{hide: showStarred && !feed.starred}">
+  <i (click)="starFeed(feed)">Star</i>
+  <div>
+    <a href="{{feed.url}}">
+      <img src="{{feed.thumbnail}}" *ngIf="feed.thumbnail != 'self'" />
+      <span>{{feed.title}}</span>
+    </a>
+  </div>
+  <div>{{feed.author}}</div>
+</div>

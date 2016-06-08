@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Feed } from './../feed';
 
 @Component({
   selector: 'app-feed-row',
-  templateUrl: './feed-row.component.html',
-  styleUrls: ['feed-row.component.css']
+  templateUrl: './../app/feed-row/feed-row.component.html',
+  styleUrls: ['./../app/feed-row/feed-row.component.css']
 })
-export class FeedRowComponent implements OnInit {
+export class FeedRowComponent {
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {
+  starFeed(feed: Feed) {
+    feed.starred = !feed.starred;
   }
+
+  @Input() feed: Feed;
+  @Input() showStarred: boolean;
 
 }

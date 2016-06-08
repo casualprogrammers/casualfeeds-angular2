@@ -11,15 +11,6 @@
 </ul>
 <div>
   <div *ngFor="let feed of Feeds; let i = index" style="padding: 0 10px 10px 10px">
-    <i (click)="starFeed(feed)">Star</i>
-    <div>
-      <a href="{{feed.url}}">
-        <img src="{{feed.thumbnail}}" *ngIf="feed.thumbnail != 'self'"/>
-        <span>{{feed.title}}</span>
-      </a>
-    </div>
-    <div>{{feed.author}}</div>
+    <app-feed-row [feed]="feed" [showStarred]="show == 'StarredFeeds'">Loading...</app-feed-row>
   </div>
-  <!--<app-feed-row>Loading...</app-feed-row>-->
-
 </div>
