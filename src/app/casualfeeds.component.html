@@ -1,3 +1,9 @@
 <h1>
   {{title}}
 </h1>
+<div>
+  <div *ngFor="let feed of Feeds; let i = index" style="padding: 0 10px 10px 10px">
+    <div>{{feed.title}}</div>
+    <div>{{feed.author}}</div>
+  </div>
+</div>
