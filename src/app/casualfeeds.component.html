@@ -1,8 +1,17 @@
 <h1>
   {{title}}
 </h1>
+<ul>
+  <li (click)="changeShowMode('AllFeeds')">
+    Show All
+  </li>
+  <li (click)="changeShowMode('StarredFeeds')">
+    Show Starred
+  </li>
+</ul>
 <div>
   <div *ngFor="let feed of Feeds; let i = index" style="padding: 0 10px 10px 10px">
+    <i (click)="starFeed(feed)">Star</i>
     <div>{{feed.title}}</div>
     <div>{{feed.author}}</div>
   </div>

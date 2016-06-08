@@ -12,11 +12,21 @@ import { HTTP_PROVIDERS } from '@angular/http';
 })
 export class CasualfeedsAppComponent implements OnInit {
   title = 'Today Reddit feeds';
-  Feeds: any[];
+  Feeds: Feed[];
+  show: string;
 
-  constructor(private feedService: FeedServiceService) {}
-  
+  starFeed(feed: Feed) {
+    feed.starred = !feed.starred;
+  }
+
+  changeShowMode(mode: string) {
+    this.show = mode;
+  }
+
+  constructor(private feedService: FeedServiceService) { }
+
   ngOnInit() {
     this.feedService.getFeeds().then(feeds => this.Feeds = feeds);
+    this.show = "AllFeeds";
   }
 }
