@@ -3,7 +3,6 @@ import { Feed } from './feed';
 import { FeedServiceService } from './feed-service.service';
 import { FeedRowComponent } from './../app/feed-row/feed-row.component'
 import { HTTP_PROVIDERS } from '@angular/http';
-/*@TODO need to understand why i can't use another component.*/
 @Component({
   moduleId: module.id,
   selector: 'casualfeeds-app',
