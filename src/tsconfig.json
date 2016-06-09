@@ -4,14 +4,14 @@
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "amd",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noImplicitAny": false,
     "outDir": "../dist/",
     "rootDir": ".",
     "sourceMap": true,
-    "target": "es6",
+    "target": "es5",
     "inlineSources": true
   },
 
